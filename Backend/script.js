@@ -12,7 +12,7 @@ let message = document.getElementById("ucapan");
 */
 timer();
 function timer(params) {
-  var countDownDate = new Date("Feb 10, 2024 11:00:00").getTime();
+  var countDownDate = new Date("Apr 13, 2024 08:00:00").getTime();
   var x = setInterval(function () {
     var now = new Date().getTime(); // Perbaikan new Date()
     var distance = countDownDate - now;
