@@ -35,7 +35,7 @@ function timer(params) {
 
 chat();
 function chat(params) {
-    fetch("https://e-wedding-invitation-d200d-default-rtdb.asia-southeast1.firebasedatabase.app/guestbook.json?auth=yQO7wliGgtnklppvbHcTCjZl2kT4Tsc69RhFxOt4")
+    fetch("https://e-wedding-invitation-8fa7b-default-rtdb.asia-southeast1.firebasedatabase.app/guestbook.json")
       .then((res) => res.json())
       .then((data) => {
         let baloon = "";
@@ -68,7 +68,7 @@ function writeGuestBook(params) {
         kedatangan: attendance.value,
         ucapan: message.value
     };
-    fetch("https://e-wedding-invitation-d200d-default-rtdb.asia-southeast1.firebasedatabase.app/guestbook.json?auth=yQO7wliGgtnklppvbHcTCjZl2kT4Tsc69RhFxOt4", {
+    fetch("https://e-wedding-invitation-8fa7b-default-rtdb.asia-southeast1.firebasedatabase.app/guestbook.json", {
         method: "POST", 
         headers: {
             "Content-Type" : "application/json"
