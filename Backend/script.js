@@ -2,9 +2,6 @@ let guestName = document.getElementById("nama");
 let attendance = document.getElementById("kedatangan");
 let message = document.getElementById("ucapan");
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const tamu = urlParams.get('to');
 
 /*function guestName(id) {
     fetch("https://e-wedding-invitation-d200d-default-rtdb.asia-southeast1.firebasedatabase.app/guest" + id + ".json?auth=yQO7wliGgtnklppvbHcTCjZl2kT4Tsc69RhFxOt4")
@@ -84,4 +81,18 @@ function writeGuestBook(params) {
     message.value = "";
 }
 
+const validate = () => {
+  const guestbook = document.getElementById('nama','kedatangan','ucapan').value
+  if (guestbook.length > 0) {
+      // success
+      writeGuestBook()
+      return;
+  }
+  // trhow error message
+  alert("Pastikan nama dan ucapan terisi sebelum kirim ucapan!");
+}
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const tamu = urlParams.get('to');
 document.getElementById("tamu").innerHTML = tamu;
