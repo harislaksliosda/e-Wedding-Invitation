@@ -89,7 +89,7 @@ const validate = () => {
       return;
   }
   // trhow error message
-  alert("Pastikan nama dan ucapan terisi sebelum kirim ucapan!");
+  alert("Pastikan form terisi sebelum kirim ucapan!");
 }
 
 const queryString = window.location.search;
